@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Scanner;
 public class projectCaseStudyGroup5 {
     public static void inputData(){
         Scanner input = new Scanner(System.in);
