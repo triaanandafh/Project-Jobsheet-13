@@ -37,7 +37,7 @@ public class projectCaseStudyGroup5 {
 
             System.out.print("Enter Type of Achievement: ");
             achievementData[index][2] = sc.nextLine();
-            String achievementLevel;
+            String achievementLevel = " ";
             while (true) { 
                 System.out.print("Enter Achievement Level (Local/National/International): ");
                 achievementLevel = sc.nextLine();
