@@ -12,48 +12,8 @@ public class projectCaseStudyGroup5 {
             System.out.print("Select menu: ");
             int select = sc.nextInt();
             
-            sc.nextLine();
-
             if(select == 1){
-                if(index < achievementData.length){
-                    System.out.print("Enter Student Name: ");
-                    achievementData[index][0] = sc.nextLine();
-                    System.out.print("Enter Student NIM: ");
-                    achievementData[index][1] = sc.nextLine();
-
-                    System.out.print("Enter Type of Achievement: ");
-                    achievementData[index][2] = sc.nextLine();
-                    String achievementLevel;
-                    while (true) { 
-                        System.out.print("Enter Achievement Level (Local/National/International): ");
-                        achievementLevel = sc.nextLine();
-                        if(achievementLevel.equalsIgnoreCase("Local") || achievementLevel.equalsIgnoreCase("National") || achievementLevel.equalsIgnoreCase("International")){
-                            break;
-                        }else{
-                            System.out.println("Invalid input. Please enter the right level of achievement!");
-                        }                         
-                    }
-                    achievementData[index][3] = achievementLevel;
-    
-                    int years = 0;
-                    while (true) { 
-                        System.out.print("Enter Year of Achievement (2010 - 2024): ");
-                        years = sc.nextInt();
-                        sc.nextLine();
-                        if(years >= 2010 && years <= 2024){
-                            break;
-                        }else{
-                            System.out.println("Invalid year. Try again.");
-                        }
-                    }
-                    achievementData[index][4] = Integer.toString(years); //mengubah years menjadi String data type
-    
-                    System.out.println("Achievement data is added successfully.\n");
-                    index++;
-                }else{
-                    System.out.println("List of achievement data is full.\n");
-                }
-            
+                inputAchievementData(achievementData);
             }else if(select == 2){
                 displayAllAchievement(achievementData);
             }else if(select == 3){
@@ -64,6 +24,48 @@ public class projectCaseStudyGroup5 {
             }else{
                 System.out.println("Select one menu on the following list. Try again.\n");
             }
+        }
+    }
+
+    static void inputAchievementData(String [][] achievementData){
+        Scanner sc = new Scanner(System.in);
+        if(index < achievementData.length){
+            System.out.print("Enter Student Name: ");
+            achievementData[index][0] = sc.nextLine();
+            System.out.print("Enter Student NIM: ");
+            achievementData[index][1] = sc.nextLine();
+
+            System.out.print("Enter Type of Achievement: ");
+            achievementData[index][2] = sc.nextLine();
+            String achievementLevel;
+            while (true) { 
+                System.out.print("Enter Achievement Level (Local/National/International): ");
+                achievementLevel = sc.nextLine();
+                if(achievementLevel.equalsIgnoreCase("Local") || achievementLevel.equalsIgnoreCase("National") || achievementLevel.equalsIgnoreCase("International")){
+                    break;
+                }else{
+                    System.out.println("Invalid input. Please enter the appropriate level as indicated.");
+                }                         
+            }
+            achievementData[index][3] = achievementLevel;
+
+            int years = 0;
+            while (true) { 
+                System.out.print("Enter Year of Achievement (2010 - 2024): ");
+                years = sc.nextInt();
+                sc.nextLine();
+                if(years >= 2010 && years <= 2024){
+                    break;
+                }else{
+                    System.out.println("Invalid year. Try again.");
+                }
+            }
+            achievementData[index][4] = Integer.toString(years); //mengubah years menjadi String data type
+
+            System.out.println("Achievement data is added successfully.\n");
+            index++;
+        }else{
+            System.out.println("List of achievement data is full.\n");
         }
     }
 
