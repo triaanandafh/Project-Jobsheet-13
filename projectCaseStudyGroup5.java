@@ -113,7 +113,7 @@ public class projectCaseStudyGroup5 {
 
     static int index = 0;
     public static void main(String[] args) {
-    String [][] achievementData = new String[1][5];
+    String [][] achievementData = new String[10][5];
         
     inputValidation(achievementData);
     }
