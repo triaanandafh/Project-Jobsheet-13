@@ -9,7 +9,7 @@ public class jobsheet13Group5 {
             System.out.println("3. Analysis of Achievements by Type");
             System.out.println("4. Exit");
             System.out.print("Select menu: ");
-            int select = sc.nextInt();
+            select = sc.nextInt();
             
             if(select == 1){
                 inputAchievementData(achievementData);
@@ -59,7 +59,7 @@ public class jobsheet13Group5 {
                     System.out.println("Invalid year. Try again.");
                 }
             }
-            achievementData[index][4] = Integer.toString(years); //mengubah years menjadi String data type
+            achievementData[index][4] = Integer.toString(years); 
 
             System.out.println("Achievement data is added successfully.\n");
             index++;
@@ -73,7 +73,7 @@ public class jobsheet13Group5 {
         System.out.println();
         System.out.println("=== LIST OF ALL ACHIEVEMENT ===");
         for (int i = 0; i < achievementData.length; i++) {
-            if(achievementData[i][0] != null && !achievementData[i][0].isEmpty()){
+            if(achievementData[i][0] != null){
                 notNull = true;
                 for(int j = 0; j < achievementData[i].length; j++){
                     switch (j) {
@@ -113,9 +113,8 @@ public class jobsheet13Group5 {
         System.out.println("=== ACHIEVEMENT ANALYSIS ===");
         boolean found = false;
         for (int i = 0; i < achievementData.length; i++) {
-            if(achievementData[i][0] != null && !achievementData[i][0].isEmpty()){
+            if(achievementData[i][0] != null){
                 if(achievementData[i][2].equalsIgnoreCase(typeAchievementToAnalyze)){
-                    
                     System.out.println("Name: " + achievementData[i][0]
                                         + " | NIM: " + achievementData[i][1]
                                         + " | Level: " + achievementData[i][3]
@@ -129,8 +128,9 @@ public class jobsheet13Group5 {
         }
         System.out.println();
     }
-
+    
     static int index = 0;
+    static int select = 0;
     public static void main(String[] args) {
     String [][] achievementData = new String[10][5];
         
