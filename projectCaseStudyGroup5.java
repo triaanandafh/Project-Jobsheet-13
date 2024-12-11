@@ -34,9 +34,9 @@ public class projectCaseStudyGroup5 {
             achievementData[index][0] = sc.nextLine();
             System.out.print("Enter Student NIM: ");
             achievementData[index][1] = sc.nextLine();
-
             System.out.print("Enter Type of Achievement: ");
             achievementData[index][2] = sc.nextLine();
+
             String achievementLevel = " ";
             while (true) { 
                 System.out.print("Enter Achievement Level (Local/National/International): ");
@@ -63,7 +63,7 @@ public class projectCaseStudyGroup5 {
             achievementData[index][4] = Integer.toString(years); //mengubah years menjadi String data type
 
             System.out.println("Achievement data is added successfully.\n");
-            index++;
+            index++; 
         }else{
             System.out.println("List of achievement data is full.\n");
         }
@@ -74,13 +74,15 @@ public class projectCaseStudyGroup5 {
         System.out.println();
         System.out.println("=== LIST OF ALL ACHIEVEMENT ===");
         for (int i = 0; i < achievementData.length; i++) {
-            if(achievementData[i][0] != null && !achievementData[i][0].isEmpty()){
-                System.out.println("Name: " + achievementData[i][0]
-                                    + " | NIM: " + achievementData[i][1]
-                                    + " | Type: " + achievementData[i][2]
-                                    + " | Level: " + achievementData[i][3]
-                                    + " | Year: " + achievementData[i][4]);
-                notNull = true;
+            for(int j = 0; j < 1; j++){
+                if(achievementData[i][j] != null && !achievementData[i][j].isEmpty()){
+                    System.out.println("Name: " + achievementData[i][0]
+                                        + " | NIM: " + achievementData[i][1]
+                                        + " | Type: " + achievementData[i][2]
+                                        + " | Level: " + achievementData[i][3]
+                                        + " | Year: " + achievementData[i][4]);
+                    notNull = true;
+                }
             }
         }
         if(!notNull){
@@ -116,7 +118,7 @@ public class projectCaseStudyGroup5 {
     static int index = 0;
     public static void main(String[] args) {
     String [][] achievementData = new String[10][5];
-        
+
     inputValidation(achievementData);
     }
 }
