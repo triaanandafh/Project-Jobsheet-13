@@ -85,7 +85,7 @@ public class projectCaseStudyGroup5 {
                 }
             }
         }
-        if(!notNull){
+        if(notNull){
             System.out.println("There is no achievement data yet.");
         }
         System.out.println();

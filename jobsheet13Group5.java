@@ -1,7 +1,5 @@
 import java.util.Scanner;
-public class jobsheet13 {
-
-
+public class jobsheet13Group5 {
     static void inputValidation(String [][] achievementData){
         Scanner sc = new Scanner(System.in);
         while (true) { 
